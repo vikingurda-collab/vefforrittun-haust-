@@ -1,12 +1,12 @@
 CREATE TABLE classes (
     id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
-    gun TEXT,
-    health INTEGER
+    name TEXT NOT NULL UNIQUE,
+    gun TEXT DEFAULT 'None',
+    health INTEGER CHECK (health > 150),
 );
 
 INSERT INTO classes (name, gun, health) VALUES
-('Scout', 'Scattergun', 125),
+('Scout','scattergun', 125),
 ('Soldier', 'Rocket Launcher', 200),
 ('Pyro', 'Flamethrower', 175),
 ('Demoman', 'Grenade Launcher', 175),
@@ -25,7 +25,7 @@ from classes
 where health >= 200
 order by health desc;
 
-Select name as "Class Name", gun as 
+Select id, name as "Class Name", gun as 
 "Primary Weapon", health as "Health Points"
 from classes
 order by health asc;
