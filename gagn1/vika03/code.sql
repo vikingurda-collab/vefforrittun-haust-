@@ -1,11 +1,11 @@
-CREATE TABLE nemendur (
+CREATE TABLE nem (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
-    age INTEGER,
+    age INTEGER CHECK (age = 20) DEFAULT 'skib',
     braut TEXT
 );
 
-INSERT INTO nemendur (name, age, braut) VALUES
+INSERT INTO nem (name, age, braut) VALUES
 ('Jón', 17, 'Tölvubraut'),
 ('María', 21, 'Rafvirkjabraut'),
 ('Anna', 19, 'Sjúkraliðabraut'),
@@ -15,9 +15,9 @@ INSERT INTO nemendur (name, age, braut) VALUES
 ('Sigríður', 20, 'Tölvubraut'),
 ('Björn', 21, 'Rafvirkjabraut');
 
-SELECT name, braut
-FROM nemendur
-where age <= 18;
+SELECT name, age, braut
+FROM nem
+
 
 
 

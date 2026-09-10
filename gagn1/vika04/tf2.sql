@@ -1,7 +1,7 @@
 CREATE TABLE classes (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL UNIQUE,
-    gun TEXT DEFAULT 'None',
+    gun TEXT DEFAULT 'help me',
     health INTEGER CHECK (health > 150),
 );
 
@@ -24,8 +24,3 @@ Select name as "Class Name", gun as
 from classes
 where health >= 200
 order by health desc;
-
-Select id, name as "Class Name", gun as 
-"Primary Weapon", health as "Health Points"
-from classes
-order by health asc;
