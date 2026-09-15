@@ -1,6 +1,7 @@
 from random import randint
 svar = "j"
-while svar == "j" or "J":
+
+while svar == "j":
     tala=randint(1,4)
     if tala == 1:
         print("það verður rok og rigning á morgun")
@@ -10,6 +11,4 @@ while svar == "j" or "J":
         print("Það verður þurrt en kalt á morgun")
     elif tala == 4:
         print("Það verður logn með smá skúrum á morgun")
-    svar=input("Spila aftur?: ")
-if svar == "n":
-    exit()
+    svar = input("aftur j/n: ").lower()
