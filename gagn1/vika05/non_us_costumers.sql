@@ -24,3 +24,17 @@ SELECT substr(InvoiceDate, 1, 4) AS Year, SUM(Total)
 FROM Invoice
 WHERE InvoiceDate LIKE '2009-%' OR InvoiceDate LIKE '2011-%'
 GROUP BY substr(InvoiceDate, 1, 4);
+
+/*Verkefni 10*/
+SELECT COUNT(*) FROM InvoiceLine
+WHERE InvoiceId = 37
+
+/*Verkefnii 11*/
+SELECT COUNT(InvoiceId)
+FROM InvoiceLine
+GROUP BY InvoiceId
+
+/*Verkefni 14*/
+SELECT BillingCountry, COUNT(InvoiceId)
+FROM Invoice
+GROUP BY BillingCountry

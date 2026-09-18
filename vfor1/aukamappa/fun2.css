@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: darkolivegreen;
+    color: indianred;
+}
+
+main {
+    width: min(90%, 700px);
+    margin: 60px auto;
+    padding: 24px;
+    background: chocolate;
+    border-radius: 12px;
+}
+
