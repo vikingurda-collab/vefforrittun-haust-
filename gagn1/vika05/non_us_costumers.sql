@@ -6,6 +6,13 @@ FROM Customer where Country != "USA"
 SELECT FirstName, LastName, Country 
 FROM Customer WHERE Country = "Brazil"
 
+/*Verkefni 3*/
+SELECT FirstName, LastName, InvoiceId, InvoiceDate, BillingCountry
+FROM Customer
+JOIN Invoice
+    USING(CustomerId)
+WHERE BillingCountry = "Brazil"
+
 /*Verkefni 4*/
 SELECT FirstName, LastName, Title
 FROM Employee WHERE Title = "Sales Support Agent"
@@ -33,6 +40,21 @@ WHERE InvoiceId = 37
 SELECT COUNT(InvoiceId)
 FROM InvoiceLine
 GROUP BY InvoiceId
+
+/*Verkefni 12*/
+SELECT Name
+FROM Track
+JOIN InvoiceLine
+    USING (TrackId)
+
+/*Verkefni 13*/
+SELECT Name, ArtistId, 
+FROM Track
+JOIN InvoiceLine
+    USING (TrackId)
+JOIN Album
+    USING (AlbumId)
+
 
 /*Verkefni 14*/
 SELECT BillingCountry, COUNT(InvoiceId)

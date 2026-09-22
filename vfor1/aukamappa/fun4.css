@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blue;
+    margin: 0;
+}
+
+main {
+    margin: 60px auto;
+    background: lightblue;
+    padding: 24px;
+    width: min(90%, 700px);
+    border-radius: 12px;
+}
+

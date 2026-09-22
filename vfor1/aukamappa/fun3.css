@@ -5,15 +5,15 @@
 body {
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
-    background: darkolivegreen;
-    color: rgb(232, 223, 223);
+    background: darksalmon;
+    color: aquamarine;
 }
 
 main {
     width: min(90%, 700px);
     margin: 60px auto;
     padding: 24px;
-    background: chocolate;
+    background: white;
     border-radius: 12px;
 }
 
@@ -31,6 +31,12 @@ button {
     border: 0;
     border-radius: 8px;
     cursor: pointer;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 12px;
 }
 
 .output {
