@@ -85,3 +85,13 @@ JOIN Genre
     USING (GenreId)
 
 /*Verkefni 17*/
+SELECT InvoiceId, COUNT(InvoiceLineId)
+FROM Invoice
+JOIN InvoiceLine
+    USING(InvoiceId)
+GROUP BY InvoiceId
+
+/*Verkefni 18*/
+SELECT 
+FROM (
+    SELECT
