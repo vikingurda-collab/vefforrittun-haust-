@@ -48,15 +48,40 @@ JOIN InvoiceLine
     USING (TrackId)
 
 /*Verkefni 13*/
-SELECT Name, ArtistId, 
-FROM Track
-JOIN InvoiceLine
-    USING (TrackId)
+SELECT
+    InvoiceLine.InvoiceLineId,
+    Track.Name,
+    Artist.Name
+FROM InvoiceLine
+JOIN Track
+    ON Track.TrackId = InvoiceLine.TrackId
 JOIN Album
-    USING (AlbumId)
-
+    ON Album.AlbumId = Track.AlbumId
+JOIN Artist
+    ON Artist.ArtistId = Album.ArtistId
 
 /*Verkefni 14*/
 SELECT BillingCountry, COUNT(InvoiceId)
 FROM Invoice
 GROUP BY BillingCountry
+
+/*Verkefni 15*/
+SELECT COUNT(TrackId), Playlist.Name
+FROM Track
+JOIN PlaylistTrack
+    USING (TrackId)
+JOIN Playlist
+    USING (PlaylistId)
+GROUP BY Playlist.Name
+
+/*Verkefni 16*/
+SELECT Track.Name, Album.Title, MediaType.Name, Genre.Name
+FROM Track
+JOIN Album
+    USING (AlbumId)
+JOIN MediaType
+    USING (MediaTypeId)
+JOIN Genre
+    USING (GenreId)
+
+/*Verkefni 17*/
