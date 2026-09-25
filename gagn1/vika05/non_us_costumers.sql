@@ -92,6 +92,43 @@ JOIN InvoiceLine
 GROUP BY InvoiceId
 
 /*Verkefni 18*/
-SELECT 
-FROM (
-    SELECT
+SELECT Employee.EmployeeId, SUM(Invoice.Total)
+FROM Invoice
+JOIN Customer
+    USING (CustomerId)
+JOIN Employee
+    ON Employee.EmployeeId = Customer.SupportRepId
+GROUP BY Employee.EmployeeId
+
+/*Verkefni 19*/
+SELECT Employee.FirstName, Employee.LastName, Employee.Title,
+SUM(InvoiceLine.Quantity),  Invoice.InvoiceDate
+FROM Employee
+JOIN Customer
+    ON Customer.SupportRepId = Employee.EmployeeId
+JOIN Invoice
+    USING (CustomerId)
+JOIN InvoiceLine
+    USING (InvoiceId)
+WHERE Invoice.InvoiceDate LIKE "%2009%"
+GROUP BY Employee.LastName
+
+/*Verkefni 20*/
+SELECT Employee.FirstName, Employee.LastName, Employee.Title,
+SUM(InvoiceLine.Quantity)
+FROM Employee
+JOIN Customer
+    ON Customer.SupportRepId = Employee.EmployeeId
+JOIN Invoice
+    USING (CustomerId)
+JOIN InvoiceLine
+    USING (InvoiceId)
+GROUP BY Employee.LastName
+
+/*Verkefni 21*/
+SELECT Employee.FirstName, Employee.LastName, Employee.Title, 
+Sum(Customer.CustomerId)
+FROM Employee
+JOIN Customer
+    ON Customer.SupportRepId = Employee.EmployeeId
+GROUP BY Employee.FirstName
