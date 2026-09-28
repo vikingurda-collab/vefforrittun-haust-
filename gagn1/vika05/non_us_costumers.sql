@@ -132,3 +132,39 @@ FROM Employee
 JOIN Customer
     ON Customer.SupportRepId = Employee.EmployeeId
 GROUP BY Employee.FirstName
+
+/*Verkefni 22*/
+SELECT Invoice.BillingCountry, sum(Invoice.Total), InvoiceLine.InvoiceLineId
+FROM Invoice
+JOIN InvoiceLine
+    USING (InvoiceId)
+GROUP BY BillingCountry
+
+/*Verkefni 23*/
+SELECT Invoice.BillingCountry, sum(Invoice.Total), 
+Invoice.CustomerId, InvoiceLine.InvoiceLineId,
+Customer.FirstName, Customer.LastName
+FROM Invoice
+JOIN InvoiceLine
+USING (InvoiceId)
+Join Customer
+USING (CustomerId)
+GROUP BY BillingCountry
+
+/*Verkefni 24*/
+SELECT Track.TrackId, Invoice.InvoiceDate
+FROM Track
+JOIN InvoiceLine
+    USING (TrackId)
+JOIN Invoice
+    USING (InvoiceId)
+WHERE InvoiceDate LIKE "%2013%"
+ORDER BY InvoiceDate DESC
+
+/*Verkefni 25*/
+SELECT Track.TrackId, Track.Name, COUNT(InvoiceLine.InvoiceLineId)
+FROM Track
+JOIN InvoiceLine
+    USING (TrackId)
+GROUP BY Track.Name
+ORDER BY InvoiceLine.InvoiceLineId
