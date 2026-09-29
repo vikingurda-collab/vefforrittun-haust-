@@ -162,9 +162,36 @@ WHERE InvoiceDate LIKE "%2013%"
 ORDER BY InvoiceDate DESC
 
 /*Verkefni 25*/
-SELECT Track.TrackId, Track.Name, COUNT(InvoiceLine.InvoiceLineId)
-FROM Track
+SELECT Track.TrackId, 
+Track.Name,
+ SUM(InvoiceLine.Quantity) AS total_sold 
+ FROM Track
+JOIN InvoiceLine 
+    USING (TrackId) 
+GROUP BY Track.TrackId, Track.Name 
+ORDER BY SUM(InvoiceLine.Quantity) DESC 
+LIMIT 5;
+
+/*Verkenfi 26*/
+SELECT Artist.Name, InvoiceLine.Quantity
+FROM Artist
+JOIN Album
+    USING (ArtistId)
+JOIN Track
+    USING (AlbumId)
 JOIN InvoiceLine
     USING (TrackId)
-GROUP BY Track.Name
-ORDER BY InvoiceLine.InvoiceLineId
+GROUP BY Artist.ArtistId, Artist.Name 
+ORDER BY SUM(InvoiceLine.Quantity) DESC 
+LIMIT 3;
+
+/*Verkefni 27*/
+SELECT MediaType.Name, InvoiceLine.Quantity
+FROM MediaType
+JOIN Track
+    USING (MediaTypeId)
+JOIN InvoiceLine
+    USING (TrackId)
+GROUP BY MediaType.MediaTypeId, MediaType.Name 
+ORDER BY SUM(InvoiceLine.Quantity) DESC 
+LIMIT 1;
