@@ -1,3 +1,8 @@
-u = str(input())
+n=int(input(""))
+k=int(input(""))
+year = 2022
 
-print(len(u))
+year += n // k
+    # n -= k
+    # year = year + 1
+print(year)

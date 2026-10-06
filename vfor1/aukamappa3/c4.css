@@ -1,0 +1,11 @@
+#card {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    background-color: #8f1e1e;
+    margin: 50px auto;
+}
+
+.done {
+    color: #00ff00;
+}

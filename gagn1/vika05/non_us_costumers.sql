@@ -195,3 +195,8 @@ JOIN InvoiceLine
 GROUP BY MediaType.MediaTypeId, MediaType.Name 
 ORDER BY SUM(InvoiceLine.Quantity) DESC 
 LIMIT 1;
+
+/*spurningar frfr no cap*/
+easy: provide a query that shows how mant tracks are in each playlist.
+medium: provide a query that shows the price of each album.
+hard: provide a query that shows customers that spent above the country average in their country and bought from at least 3 different genres.
