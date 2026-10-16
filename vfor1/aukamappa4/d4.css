@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #3e89bc;
+    color: #333;
+}
+
+.post {
+    padding: 20px;
+    margin: 60px auto;
+    width: min(90%, 800px);
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    margin: 10px;
+}
+
+.output {
+    margin-top: 20px;
+    font-weight: bold;
+}
