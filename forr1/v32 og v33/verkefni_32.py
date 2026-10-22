@@ -6,7 +6,7 @@ for line in fin:
 
 print() #prentar tóma línu
 leita=str(input("Hvað viltu leita: ")) #biður notanda um að slá inn leitarstreng
-fin=open("C:\\Users\\vikin\\OneDrive\\Desktop\\FB\\forr1\\v32\\words.txt") #opnar words.txt í breytuni fin upp á nýtt
+fin=open("C:\\Users\\vikin\\OneDrive\\Desktop\\FB\\forr1\\v32 of v33\\words.txt") #opnar words.txt í breytuni fin upp á nýtt
 for line in fin:
     word=line.strip() #fjarlægir whitespace í byrjun og enda línu
     if leita in word: #ef leitarstrengurinn er í orðinu
