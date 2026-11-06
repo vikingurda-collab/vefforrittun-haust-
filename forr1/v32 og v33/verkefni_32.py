@@ -1,4 +1,4 @@
-fin=open("C:\\Users\\vikin\\OneDrive\\Desktop\\FB\\forr1\\v32\\words.txt") #opnar words.txt í breytuni fin
+fin=open("C:\\Users\\vikin\\OneDrive\\Desktop\\FB\\forr1\\v32 og v33\\words.txt") #opnar words.txt í breytuni fin
 for line in fin:
     word=line.strip() #fjarlægir whitespace í byrjun og enda línu
     if len(word) > 20:
@@ -6,7 +6,7 @@ for line in fin:
 
 print() #prentar tóma línu
 leita=str(input("Hvað viltu leita: ")) #biður notanda um að slá inn leitarstreng
-fin=open("C:\\Users\\vikin\\OneDrive\\Desktop\\FB\\forr1\\v32 of v33\\words.txt") #opnar words.txt í breytuni fin upp á nýtt
+fin=open("C:\\Users\\vikin\\OneDrive\\Desktop\\FB\\forr1\\v32 og v33\\words.txt") #opnar words.txt í breytuni fin upp á nýtt
 for line in fin:
     word=line.strip() #fjarlægir whitespace í byrjun og enda línu
     if leita in word: #ef leitarstrengurinn er í orðinu
@@ -15,7 +15,7 @@ for line in fin:
 print() #prentar tóma línu
 samtals = 0 #breyta sem heldur utan um fjölda orða sem innihalda leitarstrenginn
 leita2=str(input("Hvað viltu leita: ")) #biður notanda um að slá inn leitarstreng
-fin=open("C:\\Users\\vikin\\OneDrive\\Desktop\\FB\\forr1\\v32\\words.txt") #opnar words.txt í breytuni fin upp á nýr
+fin=open("C:\\Users\\vikin\\OneDrive\\Desktop\\FB\\forr1\\v32 og v33\\words.txt") #opnar words.txt í breytuni fin upp á nýr
 for line in fin:
     word=line.strip() #fjarlægir whitespace í byrjun og enda línu
     for stafur in word:

@@ -1,0 +1,27 @@
+CREATE TABLE leikmaður (
+    leikmanna_nafn TEXT NOT NULL,
+    leikmannaId INTEGER PRIMARY KEY,
+    leikmanna_mörk INTEGER
+)
+
+CREATE TABLE lið (
+    leikmanna_nafn TEXT NOT NULL,
+    lið_nafn TEXT NOT NULL,
+    liðId INTEGER PRIMARY KEY,
+    sigrar INTEGER,
+    jafntefli INTEGER,
+    töp INTEGER
+);
+
+CREATE TABLE leikur (
+    lið_nafn TEXT NOT NULL,
+    leikja_stig INTEGER,
+    leikurId INTEGER PRIMARY KEY,
+    heima_úti TEXT NOT NULL
+);
+
+CREATE TABLE tímabil (
+    timabil_ár INTEGER PRIMARY KEY,
+    heildar_stig INTEGER NOT NULL,
+    lið_nafn TEXT NOT NULL
+);

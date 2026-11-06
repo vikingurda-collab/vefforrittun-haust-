@@ -1,0 +1,10 @@
+leita = input("af hvaða eftirnafni viltu leita?: ")  # biður notanda um að slá inn leitarstreng
+satt=False
+with open(r"C:\Users\vikin\OneDrive\Desktop\FB\forr1\v36og37\nofn.txt", encoding="utf-8") as fin:
+    for line in fin:
+        word = line.strip()  # fjarlægir whitespace í byrjun og enda línu
+        if leita in word:  # ef leitarstrengurinn er í orðinu
+            satt=True
+            print(word)  # prentar orðið
+if satt == False:
+    print("nafnið fannst ekki í skjalinu, reyndu án íslenska stafa")
