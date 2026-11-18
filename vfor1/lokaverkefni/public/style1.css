@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-size-adjust: 600%;
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: cornsilk;
+    color: black;
+}
+
+main {
+    width: min(90%, 700px);
+    margin: 60px auto;
+    padding: 20px;
+    background-color: azure;
+    border-radius: 12px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
